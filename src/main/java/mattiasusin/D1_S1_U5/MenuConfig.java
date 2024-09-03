@@ -1,9 +1,7 @@
 package mattiasusin.D1_S1_U5;
 
-import mattiasusin.D1_S1_U5.entities.Bevande;
-import mattiasusin.D1_S1_U5.entities.Menu;
-import mattiasusin.D1_S1_U5.entities.Pizze;
-import mattiasusin.D1_S1_U5.entities.Toppings;
+import mattiasusin.D1_S1_U5.entities.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -11,11 +9,13 @@ import org.springframework.context.annotation.Primary;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 @Configuration
 public class MenuConfig {
 
     //ELENCO BEANS
+
 
     @Bean
     @Primary
@@ -48,4 +48,16 @@ public class MenuConfig {
                 new Toppings("Crudo",180,1.0)
         );
     };
+    @Value("${costo.del.coperto}")
+    private double costoDelCoperto;
+
+    @Bean
+    public double costoDelCoperto() {
+        return costoDelCoperto;
+    }
+
+    @Bean
+    public Ordine numeroComanda(){
+        return new Ordine()
+    }
 }
