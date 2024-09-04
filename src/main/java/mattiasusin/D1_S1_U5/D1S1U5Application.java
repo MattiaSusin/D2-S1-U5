@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import lombok.extern.slf4j.Slf4j;
 
+import java.sql.SQLOutput;
 import java.util.List;
 
 @SpringBootApplication
@@ -19,18 +20,23 @@ public class D1S1U5Application {
 		SpringApplication.run(D1S1U5Application.class, args);
 
 		// METODI CON I BEANS
-
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(D1S1U5Application.class);
 		// Rappresenta un riferimento allo 'scatolone' (Application Context)
 
+		System.out.println("");
+		System.out.println("*****************PIZZE***************************");
 		List<Pizze> p = context.getBean("getPizze", List.class);
 		p.forEach(System.out::println);
-
+		System.out.println("");
+		System.out.println("*****************TOPPINGS***************************");
 		List<Toppings> t = context.getBean("getToppings", List.class);
 		t.forEach(System.out::println);
-
+		System.out.println("");
+		System.out.println("*****************DRINKS***************************");
 		List<Bevande> b = context.getBean("getBevande", List.class);
 		b.forEach(System.out::println);
+
+
 	}
 
 }

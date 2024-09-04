@@ -14,7 +14,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class Ordine {
-    @Autowired
+
     private int numeroComanda;
     private List<Menu> elementiMenu;
     private Clock orarioAcquisizione;

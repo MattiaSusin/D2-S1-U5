@@ -16,4 +16,3 @@ public class Menu {
     protected int calories;
     protected double price;
 }
-

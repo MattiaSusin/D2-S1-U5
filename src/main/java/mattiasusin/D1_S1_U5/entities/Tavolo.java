@@ -11,14 +11,12 @@ import java.util.UUID;
 @Setter
 @Getter
 public class Tavolo {
-    @Autowired
+
     private int numeroTavolo;
     private int numeroCoperti;
     private boolean statoTavolo;
 
 // TO STRING
-
-
     @Override
     public String toString() {
         return "Tavolo{" +
