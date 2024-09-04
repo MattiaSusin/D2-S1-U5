@@ -1,21 +1,31 @@
 package mattiasusin.D3_S1_U5;
 
-import mattiasusin.D3_S1_U5.entities.*;
+import lombok.Getter;
+import mattiasusin.D3_S1_U5.entities.Bevande;
+import mattiasusin.D3_S1_U5.entities.Pizze;
+import mattiasusin.D3_S1_U5.entities.Toppings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 @Configuration
 public class MenuConfig {
 
+    @Value("${costo.del.coperto:2.5}")
+    private double Coperto;
+
+
     //ELENCO BEANS
+
+    @Getter
+    @Value("${costo.del.coperto:2.50}")
+    private double costoDelCoperto;
+
     @Autowired
     @Bean
     @Primary
@@ -28,7 +38,15 @@ public class MenuConfig {
         );
     }
 
-    ;
+    public double getCostoMargherita() {
+        List<Pizze> pizzeList = getPizze(); //OTTIENI LISTA DELLE PIZZE
+        for (Pizze pizze : pizzeList) {
+            if ("Margherita".equals(pizze.getName())) {
+                return pizze.getPrice(); //RESTITUISCE IL PREZZO DELLA PIZZA
+            }
+        }
+        return 0;
+    }
 
     @Bean
     public List<Bevande> getBevande() {
@@ -53,13 +71,5 @@ public class MenuConfig {
         );
     }
 
-    ;
-    @Value("${costo.del.coperto:2.5}")
-    private double Coperto;
 
-    @Bean
-    public double costoDelCoperto() {
-        double costoDelCoperto = 2.5;
-        return costoDelCoperto;
-    }
 }
