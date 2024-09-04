@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>mattiasusin</groupId>
-	<artifactId>D1-S1-U5</artifactId>
+	<artifactId>D3-S1-U5</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>D1-S1-U5</name>
+	<name>D3-S1-U5</name>
 	<description>Esercizio Day 1 Week 1 Unit 5</description>
 	<url/>
 	<licenses>

@@ -1,6 +1,6 @@
-package mattiasusin.D1_S1_U5;
+package mattiasusin.D3_S1_U5;
 
-import mattiasusin.D1_S1_U5.entities.*;
+import mattiasusin.D3_S1_U5.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

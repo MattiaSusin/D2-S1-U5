@@ -1,4 +1,4 @@
-package mattiasusin.D1_S1_U5.entities;
+package mattiasusin.D3_S1_U5.entities;
 
 public class Toppings extends Menu{
 

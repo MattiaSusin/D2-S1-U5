@@ -1,9 +1,9 @@
-package mattiasusin.D1_S1_U5;
+package mattiasusin.D3_S1_U5;
 
-import mattiasusin.D1_S1_U5.entities.Bevande;
-import mattiasusin.D1_S1_U5.entities.Menu;
-import mattiasusin.D1_S1_U5.entities.Pizze;
-import mattiasusin.D1_S1_U5.entities.Toppings;
+import mattiasusin.D3_S1_U5.entities.Bevande;
+import mattiasusin.D3_S1_U5.entities.Menu;
+import mattiasusin.D3_S1_U5.entities.Pizze;
+import mattiasusin.D3_S1_U5.entities.Toppings;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,13 +14,13 @@ import java.util.List;
 
 @SpringBootApplication
 @Slf4j
-public class D1S1U5Application {
+public class D3S1U5Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(D1S1U5Application.class, args);
+		SpringApplication.run(D3S1U5Application.class, args);
 
 		// METODI CON I BEANS
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(D1S1U5Application.class);
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(D3S1U5Application.class);
 		// Rappresenta un riferimento allo 'scatolone' (Application Context)
 
 		System.out.println("");
